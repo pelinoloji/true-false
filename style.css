@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  width: 800px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2em;
+}
+.time {
+  width: 300px;
+}
+.button {
+  background-color: #1fb6ff;
+  width: 100px;
+  padding: 7px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.questions {
+  width: 700px;
+  background-color: whitesmoke;
+  height: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
