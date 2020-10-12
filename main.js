@@ -187,3 +187,46 @@ button.addEventListener("click", handleStart);
 recognition.addEventListener("result", (e) => {
   handleResults(e);
 });
+
+//ALTERNATIVE
+// const SpeechRecognition =
+//   window.SpeechRecognition || window.webkitSpeechRecognition;
+// const recognition = new SpeechRecognition();
+// recognition.interimResults = true;
+// recognition.lang = "en-UK";
+
+// const button = document.querySelector(".button");
+// const questionBox = document.querySelector(".questionBox");
+// const timer = document.querySelector(".timer");
+
+// let currentQuestion = {};
+// let availableQuestions = [];
+// let result = [];
+
+// const startGame = () => {
+//   availableQuestions = [...questions];
+//   getNewQuestion();
+//   recognition.start();
+// };
+
+// const getNewQuestion = () => {
+//   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+//   currentQuestion = availableQuestions[questionIndex];
+//   questions.innerText = currentQuestion.question;
+//   getResult;
+//   availableQuestions.splice(questionIndex, 1);
+// };
+
+// const getResult = (e) => {
+//   e.results[0][0].transcript === currentQuestion.answer ? "yes" : "no";
+//   setTimeout(() => {
+//     getNewQuestion();
+//   }, 1000);
+// };
+
+// button.addEventListener("click", startGame);
+// recognition.addEventListener("result", (e) => {
+//   getResult(e);
+// });
+
+// startGame();
