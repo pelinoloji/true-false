@@ -159,8 +159,31 @@ const quizeList = [
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
+recognition.interimResults = true;
 recognition.lang = "en-UK";
 
 const button = document.querySelector(".button");
-const question = document.querySelector(".questions");
+const questionBox = document.querySelector(".questionBox");
 const timer = document.querySelector(".timer");
+
+handleStart = () => {
+  recognition.start();
+  console.log("Start to speech");
+};
+
+const newQuestion = quizeList.map((quize) => {
+  return console.log(quize, "quize"); //forEach yap
+});
+
+handleResults = (e) => {
+  // quizeList.map((quize, index) => {
+  //   console.log(quize, "quize");
+  //    questionBox.innerHTML = quize.question;
+  //   e.results[0][0].transcript === quize.answer ? "YES" : "NO";
+  // });
+};
+
+button.addEventListener("click", handleStart);
+recognition.addEventListener("result", (e) => {
+  handleResults(e);
+});
